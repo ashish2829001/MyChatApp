@@ -20,6 +20,7 @@ socket.on('countUpdated',(count)=>{
 
 
 socket.on('message',(x)=>{
+    document.getElementById('naam').innerText = x;
     const html = Mustache.render(messageTemplate2,{
         message: x,
 
