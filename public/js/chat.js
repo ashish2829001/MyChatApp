@@ -26,7 +26,7 @@ document.querySelector('body').style.height = h+'px';
 socket.on('message',(x)=>{
     document.getElementById('naam').innerText = x;
     const html = Mustache.render(messageTemplate2,{
-        message: x,
+        message: 'Welcome '+x,
 
     });
     $messageTag.insertAdjacentHTML('beforeend',html);

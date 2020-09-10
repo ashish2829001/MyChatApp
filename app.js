@@ -28,7 +28,7 @@ io.on('connection',(socket)=>{
         
         socket.join(user.room);
 
-        socket.emit('message',`Welcome  ${user.username}`);
+        socket.emit('message',`${user.username}`);
         socket.broadcast.to(user.room).emit('message1',`${user.username} has joined now!`);
         count = count+1;
         io.to(user.room).emit('countUpdated',count);
