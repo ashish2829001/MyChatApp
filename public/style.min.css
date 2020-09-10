@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input:focus{ 
+    outline: none ! important; 
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-data{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+    padding: 50px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    min-width: 310px;
+
+    
+    
+    background: -webkit-linear-gradient(left, wheat, grey, wheat);
+    
+    background: -o-linear-gradient(right, white, black, white);  
+ 
+    background: -moz-linear-gradient(right, white, black, white);  
+ 
+    background: linear-gradient(to right, #1e1403,#7b4c4c,#a2a18c);
+
+    /* -moz-box-shadow: 15px 15px 15px 15px rgba(68,68,68,0.6); */
+	/* -webkit-box-shadow: 15px 15px 15px 15px rgba(68,68,68,0.6); */
+	box-shadow: 15px 15px 15px 15px rgba(68,68,68,0.6);
+    
+}
+.form .heading{
+    font-size: 20px;
+    color: orangered;
+}
+.input-field{
+    padding: 8px;
+    margin: 10px 0;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: wheat;
+}
+.hover-pointer:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+.main{
+    background: linear-gradient(to right, #ae0b0bed,#64451717,#a11111);
+    width: 100%;
+    height:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 1000px;
+    height: 70%;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.side-bar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 0 20px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    float: left;
+    background-color: rgb(121, 95, 108);
+    /* overflow: hidden; */
+}
+.chat-area{
+    /* padding: 50px; */
+    box-sizing: border-box;
+    height: 100%;
+    width: 70%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #79554866;
+}
+.user-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(212, 137, 131);
+}
+.usericon{
+    padding: 5px;
+    margin-left: 30px;
+}
+.myname{
+    padding: 20px 20px 20px 10px ;
+    color: rgb(46, 7, 7);
+    font-size: 1.2rem;
+    flex-grow: 1;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 40px;
+}
+.call,.videocall{
+    padding: 25px;
+}
+.message-box{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    overflow-y:scroll;
+    overflow: auto;
+    flex-grow: 1;
+}
+.room-name{
+    font-size: 1.2rem;
+    background-color: rgb(133, 133, 128);
+    color: rgb(15, 15, 158);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#sidebar{
+    flex-grow: 1;
+}
+.bottom{
+    padding: 5px 20px;
+    text-align: center;
+    color: blanchedalmond;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    font-size: 1rem;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff8dc9e;
+
+    background-color: rgb(40 32 25 / 79%);
+}
+.left{
+    background-color: #f5deb369;
+    clear: both;
+    float: left;
+}
+.right{
+    clear: both;
+    float: right;
+    background-color: rgb(235, 183, 183);
+}
+.message{
+    border-radius: 5px;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.random-messages{
+    clear: both;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: rgb(143, 157, 173);
+    color: rgb(66, 61, 61);
+    font-size: 0.95rem;
+    padding: 5px;
+    border-radius: 6px;
+}
+.msg-time{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+}
+.name{
+    font-size: 0.87rem;
+    color: #443131;
+}
+.msg{
+    font-size: 1.05rem;
+    color: darkblue;
+}
+.time{
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 0.8rem;
+    padding: 3px;
+}
+.message-create{
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-around;
+    height: 50px;
+}
+.message-form{
+    display: flex;
+    overflow: hidden;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 75%;
+}
+.chat-input{
+    width: 83%;
+    border: none;
+    padding: 10px;
+}
+.chat-send{
+    width: 17%;
+    background-color: rgb(219, 217, 217);
+}
+.chat-sendloc{
+    width: 18%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+}
+.usericon{
+    font-size: 18px;
+}
+
+#room{
+    display: none;
+}
+
+#back{
+    display: none;
+}
+
+@media only screen and (max-width: 1050px){
+    .content{
+        width: 550px;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .form{
+        min-width: 200px;
+        padding: 20px;
+    }
+    .side-bar{
+        border-radius: 10px;
+        width: 95%;
+        height: 95%;
+        margin: 0;
+        padding-top: 10px;
+        overflow: auto;
+    }
+    #side{
+        display: none;
+    }
+    .content{
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 95%;
+    }
+    .chat-area{
+        width: 95%;
+        border-radius: 10px;
+        overflow: auto;
+    }
+    #room{
+        display: block;
+        font-size: 20px;
+        padding: 10px 20px 10px 10px;
+    }
+    .myname{
+        font-size: 1rem;
+    }
+    .usericon{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    #back {
+        z-index: 11;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    #back i{
+        font-size: 20px;
+        padding: 10px 5px;
+        color: blanchedalmond;
+    }
+    .message{
+        max-width: 200px;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(46, 44, 44); 
+    border-radius: 4px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #eb9595; 
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(214, 110, 110); 
+  }

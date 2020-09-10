@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chatting App</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./style.min.css">
+</head>
+
+<body onkeydown="return (event.keyCode != 116)">
+    <div class="main">
+        <div class="content">
+            <div class="side-bar" id="side">
+                <div id="back">
+                    <div class="usericon" id="cross"><i class="fas fa-times hover-pointer"></i></div>
+                </div>
+                <div id="sidebar">
+                </div>
+                <div class="bottom">Active Users - <span id="number-of-users"></span> </div>
+            </div>
+            <div class="chat-area" id="chat">
+                <div class="user-details">
+                    <div class="usericon" id="room"><i class="fas fa-users hover-pointer" style='color: #840202;'></i>
+                    </div>
+                    <div class="usericon"><i class='fas fa-user hover-pointer' style='color: #840202;'></i></div>
+                    <div class="myname">Ashish Pratap Singh</div>
+                    <div class="icons">
+                        <div class="call">
+                            <i class='fas fa-phone-alt hover-pointer' style='color: #840202;'></i>
+                        </div>
+                        <div class="videcall">
+                            <i class='fas fa-video hover-pointer' style='color: #840202;'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-box" id="location">
+                    <div class="left message">Hello user</div>
+                    <div class="random-messages">shjdbfs dvhbds</div>
+                    <div class="right message">hii</div>
+                </div>
+                <div class="message-create">
+                    <form class="message-form" id="messageForm">
+                        <input name="message-content" class="chat-input" type="text" required autocomplete="off">
+                        <button class="chat-input chat-send hover-pointer" id="sub" type="submit">Send</button>
+                    </form>
+                    <button class="input-field chat-sendloc btn hover-pointer" id="send" type="submit">Send
+                        Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="message-template" type="text/html">
+        <div class="left message">
+            <div class="name">{{username}}</div>
+            <div class="msg">{{messagess}}</div>
+            <div class="time">{{createdAt}}</div>  
+        </div>
+    </script>
+    <script id="message-template1" type="text/html">
+        <div class="right message">
+            <div class="name">{{username}}</div>
+            <div class="msg-time">
+                <div class="msg">{{messagess}}</div>
+                <div class="time">{{createdAt}}</div> 
+            </div>
+        </div>
+    </script>
+    <script id="location-template" type="text/html">
+        <div class="left message">
+            <div class="name">{{username}}</div>
+            <div class="msg">Click below to get <br><a href='{{messagess}}'>{{username}}'s Location</a></div>
+            <div class="time">{{createdAt}}</div>  
+        </div>
+    </script>
+    <script id="location-template1" type="text/html">
+        <div class="right message">
+            <div class="name">{{username}}</div>
+            <div class="msg-time">
+                <div class="msg">Click below to get your<br><a href='{{messagess}}'>{{username}}'s Location</a></div>
+                <div class="time">{{createdAt}}</div> 
+            </div>
+        </div>
+    </script>
+    <script id="sidebar-template" type="text/html">
+        
+        <!-- <div class="usericon"><i class="fas fa-users hover-pointer" style=' padding: 0 15px; color: #840202;'></i></div> -->
+        <div class="room-name"><i class='fas fa-users hover-pointer' style='font-size:20px; margin-right: 17px; color: #561111;'></i>{{room}}</div>
+        <ul>
+            {{#users}}
+            <li><i class='fas fa-user hover-pointer' style='font-size:13px; margin-right: 17px; color: #fff8dc9e;'></i>{{username}}</li>
+            {{/users}}
+        </ul>
+    </script>
+    <script id="message-template2" type="text/html">
+        <div class="random-messages">{{message}}</div>
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+
+</body>
+
+</html>
