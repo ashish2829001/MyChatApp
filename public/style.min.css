@@ -222,6 +222,8 @@ ul li{
     height: 50px;
 }
 .message-form{
+    position: sticky;
+    bottom: 0;
     display: flex;
     overflow: hidden;
     margin-left: 10px;
@@ -265,6 +267,12 @@ ul li{
     .form{
         min-width: 200px;
         padding: 20px;
+    }
+    .message-form{
+        width: 90%;
+    }
+    #send{
+        display: none;
     }
     .side-bar{
         border-radius: 10px;
