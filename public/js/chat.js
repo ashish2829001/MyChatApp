@@ -18,6 +18,10 @@ socket.on('countUpdated',(count)=>{
     document.getElementById('number-of-users').innerHTML=count;
 });
 
+var h = window.innerHeight;
+var w = window.innerWidth;
+document.querySelector('body').style.width = w+'px';
+document.querySelector('body').style.height = h+'px';
 
 socket.on('message',(x)=>{
     document.getElementById('naam').innerText = x;

@@ -1,14 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 input:focus{ 
     outline: none ! important; 
 }
-body{
-    width: 100vw;
-    height: 100vh;
-}
+/* body{ */
+    /* width: 100vw; */
+    /* height: 100vh; */
+/* } */
 
 .form-data{
     background-color: red;
